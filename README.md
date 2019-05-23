@@ -1,7 +1,8 @@
 How it works
-1.	Open repository (https://github.com/Yastrebok/test.job)
-2.	Download project and UnZIP archive 
-3.	Open MySQL console and execute script
-4.	Open CMD console, go to the folder with project and  execute follow command
-java -jar build/libs/test-0.0.1.jar
+1.	Open link (https://github.com/Yastrebok/BankSystem/archive/BankSystem.zip)
+2.	Open MySQL console and execute script
+
+
+3.	Open console, go to the folder with project where is pom.xml and execute command "mvn install"
+4.  Еhen go to the directory 'target' open console and execute the comand "java -jar bank.system-0.0.1.jar"
 5.	Open web browser and go to address “http://localhost:8080/” 
