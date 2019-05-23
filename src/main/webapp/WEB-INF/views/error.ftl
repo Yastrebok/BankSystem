@@ -16,7 +16,6 @@
     <br>
     <br>
     <a role="button" class="btn btn-primary" href="/customer/list">OK</a>
-
 </div>
 
 
