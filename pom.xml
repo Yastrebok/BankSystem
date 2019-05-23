@@ -11,7 +11,7 @@
 	<groupId>com.bank.system</groupId>
 	<artifactId>bank.system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>bank.system</name>
 	<description>Bank project</description>
 
@@ -63,11 +63,7 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.hibernate</groupId>-->
-			<!--<artifactId>hibernate-core</artifactId>-->
-			<!--<version>5.2.16.Final</version>-->
-	<!--</dependency>-->
+
     </dependencies>
 
 	<build>
