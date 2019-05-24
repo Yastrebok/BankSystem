@@ -65,7 +65,6 @@
             } else {
                 table.rows[i].style.display = "none";
             }
-
         }
     }
 </script>
