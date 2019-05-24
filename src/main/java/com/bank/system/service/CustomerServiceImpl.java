@@ -1,6 +1,8 @@
 package com.bank.system.service;
 
+import com.bank.system.entity.Account;
 import com.bank.system.entity.Customer;
+import com.bank.system.repository.AccountRepository;
 import com.bank.system.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,9 +16,24 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    private AccountRepository accountRepository;
+
     @Override
-    public List<Customer> getListCustomers() {
-        return customerRepository.getListCustomers();
+    public List<CustomerDto> getListCustomers() {
+        return customerRepository.getListCustomers().stream()
+                .map(customer ->
+                        CustomerDto.builder()
+                                .customerId(customer.getId())
+                                .customerName(customer.getName())
+                                .address(customer.getAddress())
+                                .age(customer.getAge())
+                                .sum(accountRepository.getListAccounts(customer.getId())
+                                        .stream()
+                                        .mapToDouble(Account::getQuantity)
+                                        .sum())
+                                .build())
+                .collect(Collectors.toList());
     }
 
     @Override

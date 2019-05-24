@@ -13,7 +13,7 @@ import java.util.List;
 
 public interface CustomerService {
 
-    List<Customer> getListCustomers();
+    List<CustomerDto> getListCustomers();
 
     Customer getCustomer(int id);
 
@@ -33,6 +33,6 @@ public interface CustomerService {
         private String customerName;
         private String address;
         private int age;
-        private List<Account> listAccounts;
+        private double sum;
     }
 }

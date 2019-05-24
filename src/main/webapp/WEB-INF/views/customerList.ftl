@@ -40,6 +40,7 @@
                 <th>Name</th>
                 <th>Address</th>
                 <th>Age</th>
+                <th>Sum</th>
                 <th></th>
                 <#--<th></th>-->
             </tr>
@@ -48,11 +49,12 @@
 
         <#list list as customer>
         <tr>
-            <td hidden>${customer.id}</td>
-            <td><a href="/account/customer/${customer.id}">${customer.name}</a></td>
+            <td hidden>${customer.customerId}</td>
+            <td><a href="/account/customer/${customer.customerId}">${customer.customerName}</a></td>
             <td>${customer.address}</td>
             <td>${customer.age}</td>
-            <td><a role="button" class="btn btn-primary" href="/customer/update/${customer.id}">Edit</a></td>
+            <td>${customer.sum}</td>
+            <td><a role="button" class="btn btn-primary" href="/customer/update/${customer.customerId}">Edit</a></td>
             <#--<td><a role="button" class="btn btn-primary" href="/customer/delete/${customer.id}">Delete</a></td>-->
         </tr>
         </#list>
